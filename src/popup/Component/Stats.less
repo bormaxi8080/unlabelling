@@ -1,0 +1,24 @@
+@import "../definitions";
+
+.c-stats {
+    &__counter {
+        transition: all;
+        transition-timing-function: ease-in-out;
+        transition-duration: 300ms;
+        opacity: 1;
+        color: inherit;
+
+        &--loading {
+            opacity: .1;
+            color: @color-bg;
+        }
+    }
+
+    &__inoteka {
+        margin: 12px 0 0;
+    }
+
+    &__inoteka-requires-vpn {
+        font-size: 90%;
+    }
+}

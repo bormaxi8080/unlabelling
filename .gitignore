@@ -1,0 +1,6 @@
+.idea
+.env
+dist
+dist-zip
+node_modules
+.npmrc

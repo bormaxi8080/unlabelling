@@ -1,0 +1,49 @@
+@import "definitions";
+
+.font-size(@weight) {
+    @font-face {
+        font-family: @font-family;
+        font-style: normal;
+        font-weight: @weight;
+        src: url("fonts/@{font-family}-@{weight}.ttf") format('truetype');
+    }
+}
+
+.font-size(@font-weight-normal);
+.font-size(@font-weight-bold);
+
+html {
+    width: @popup-width;
+    height: @popup-height;
+    margin: 0;
+    padding: 0;
+}
+
+@body-padding-x: 40px;
+@body-padding-y: 12px;
+
+body {
+    width: @popup-width;
+    height: @popup-height;
+    margin: 0;
+    padding: 0;
+    font-family: @font-family;
+    font-weight: @font-weight-normal;
+    font-size: @font-size-normal;
+    background: @color-bg;
+    color: @color-text;
+    overflow: hidden;
+    user-select: none;
+
+    > .container {
+        position: absolute;
+        top: @body-padding-y;
+        left: @body-padding-x;
+        right: @body-padding-x;
+        bottom: @body-padding-y;
+    }
+
+    a, a:link, a:visited, a:focus {
+        color: @color-text;
+    }
+}
